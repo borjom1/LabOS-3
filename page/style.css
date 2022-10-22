@@ -1,0 +1,15 @@
+body {
+    background-color: #1f2021;
+}
+
+p {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: azure;
+    background-color: #262729;
+    margin: 70px 150px 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 25px;
+}
