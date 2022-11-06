@@ -79,15 +79,32 @@
 
 <br>
 
-Написав скрипт, який оновлює Linux, скачує **Apache HTTP Server** та запускає сервер.
+Задав дозвіл файлу з приватним SSH-ключем прописавши команду `chmod 400 key`.
+
+
+Увійшов до віддаленої системи за допомогою приватного SSH-ключа за командою: `ssh -i "key" ubuntu@ec2-18-157-84-18.eu-central-1.compute.amazonaws.com`
 
 ![screenshot](/assets/Screenshot_13.png)
 
 <br>
 
-Вказую цей скрипт у головному ресурсі:
+Далі на віртуальній машині прописую наступні команди (оновлюю Firewall та встановлюю Apache HTTP Server).
+
+`sudo apt update` <br>
+`sudo apt upgrade` <br>
+`sudo apt install apache2` <br>
+`sudo ufw allow in "Apache Full"` <br>
+`sudo systemctl restart apache2` <br>
+
+Після чого створюю новий `index.html` і замінюю його за шляхом **/var/www/html/index.html**
+
+`mv -i index.html /var/www/html/index.html`
+
+Результат:
 
 ![screenshot](/assets/Screenshot_14.png)
+
+
 
 <br>
 
