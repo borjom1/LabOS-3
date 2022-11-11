@@ -10,4 +10,10 @@ public class DemoController {
     public String first() {
         return "Hello from Spring Boot!";
     }
+    
+    // щойно доданий end-point
+    @GetMapping("/lab")
+    public String second() {
+        return "Lab 6 was successfully done!";
+    }
 }
