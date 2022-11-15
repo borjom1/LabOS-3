@@ -16,4 +16,9 @@ public class DemoController {
     public String second() {
         return "Lab 6 was successfully done!";
     }
+    
+    @GetMapping("/x")
+    public String secondx() {
+        return "x!";
+    }
 }
